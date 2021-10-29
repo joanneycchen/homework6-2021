@@ -113,6 +113,7 @@ header{
 
     .pricing{
         flex-wrap: nowrap;
+        align-items: flex-end;
     }
     .card{
         border:2px #45ADDD solid;
