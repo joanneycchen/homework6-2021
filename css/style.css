@@ -1,0 +1,135 @@
+body{
+    font-family: "Alegreya Sans SC", serif;
+    background-image:url("../images/concrete_seamless.png"); 
+    background-color: #f1f1f1;
+}
+
+header{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.nav_links{
+    display: flex;
+    flex-direction: column;
+  }
+
+.nav_links li a{
+    color:#551A8B;
+    text-decoration: underline;
+}
+.nav_links li a:hover, a:focus{
+    color: #551A8B;
+    text-decoration-style: solid;
+}
+.card{
+
+    flex-basis: 450px;
+    
+}
+.card >header{
+    background-color: #288088;
+    border: 2px #45ADAD soild;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius:7px 7px 0 0;
+}
+.pricing{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;  
+}
+.gallery{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap; 
+
+}
+.gallery img{
+    border:10px #50c7c7 solid;
+    margin:10px;
+    width:300px;
+}
+
+#logo{
+    animation-name: move_logo;
+    animation-duration: 5s;
+    animation-iteration-count:1;
+}
+
+@keyframes move_logo{
+    0% {width: 50px;}
+    100% {width: 425px;}
+}
+
+@-webkit-keyframes move_logo{
+    0% {width: 50px;}
+    100% {width: 425px;}
+
+}
+
+@media screen and (min-width: 850px){
+    header{
+        flex-direction: row;
+        /* justify-self: flex-start; */
+    }
+    .nav_links{
+        flex-direction: row;
+        justify-self: flex-end;
+    }
+    .card{
+        flex-basis: 250px;
+    }
+    body > header{
+        flex-direction: row;
+        justify-content: space-between;
+        position: sticky;
+        top:0;
+
+    }
+
+}
+@media (prefers-reduced-motion:reduce){
+    #logo{
+        animation:none;
+    }
+}
+@media print{
+    body{
+        background-image: none;
+    }
+
+    .nav_links{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .pricing{
+        flex-wrap: nowrap;
+    }
+    .card{
+        border:2px #45ADDD solid;
+        flex-basis: 250px;
+    }
+    #gallery .gallery{
+        display:none;
+    }
+    .card li:before{
+        content: "\1F44D";
+    }
+    .card li:nth-child(2):after{
+        content: "\1F44D";
+    }
+    .card li:nth-child(2):after{
+        content: "\1F44D";
+    }
+
+
+}
